@@ -14,15 +14,32 @@
     <h1>Login</h1>
     <div class="textbox">
       <i class="fa-solid fa-user"></i>
-      <input type="textbox" name="" value="" placeholder="Enter Username">
+      <input type="textbox" class="username" name="" value="" placeholder="Enter Username">
     </div>
     <div class="textbox">
       <i class="fa-solid fa-lock"></i>
-      <input type="password" name="" value="" placeholder="Enter Password">
+      <input type="password" class="password" name="" value="" placeholder="Enter Password">
     </div>
-    <input class="btn" type="button" name="" value="Log-in">
+    <input onclick="myFunction()" class="btn" type="button" name="" value="Log-in">
     <br>
   </div>
+  
+  <script>
+    const username = document.querySelector(".username");
+    const password = document.querySelector(".password");
+    function myFunction()
+    {
+      if (username.value === "admin" && password.value === "12345")
+      {
+        alert("Login Succesfull")
+        location.replace("games.html")
+      }
+      else
+      {
+        alert("Invalid Login Details... Refer the report please")
+      }
+    }
+  </script>
 </body>
 
 </html>
