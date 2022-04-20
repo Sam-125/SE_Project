@@ -13,21 +13,42 @@
   <div class="buyNow">
     <h1>Buy Now</h1>
     <div class="textbox">
-      <input type="textbox" name="" value="" placeholder="Full Name">
+      <input type="textbox" class="name" name="" value="" placeholder="Full Name">
     </div>
     <div class="textbox">
-      <input type="textbox" name="" value="" placeholder="Home Address">
+      <input type="textbox" class="address" name="" value="" placeholder="Home Address">
     </div>
     <div class="textbox">
-      <input type="textbox" name="" value="" placeholder="Email">
+      <input type="textbox" class="email" name="" value="" placeholder="Email">
     </div>
     <div class="textbox">
-      <input type="textbox" name="" value="" placeholder="Phone No.">
+      <input type="textbox" class="no" name="" value="" placeholder="Phone No.">
     </div>
-    <input class="btn" type="button" name="" value="Confirm">
+    <input onclick="myFunction()" class="btn" type="button" name="" value="Confirm">
     <br>
     <a href="index.html" class="fp">Go to Home Page</a>
   </div>
+  
+  <script>
+    const name = document.querySelector(".name");
+    const address = document.querySelector(".address");
+    const email = document.querySelector(".email");
+    const phone = document.querySelector(".no");
+
+    function myFunction()
+    {
+      if(name.value !== "" && address.value !== "" && email.value !== "" && phone.value !== "")
+      {
+        alert("Game purchase successfull")
+        location.replace("games.html");
+      }
+      else
+      {
+        alert("Enter all fields")
+      }
+    }
+  </script>
+
 </body>
 
 </html>
