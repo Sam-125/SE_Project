@@ -86,7 +86,7 @@ ul li.active a {
 
 /**********LOGIN PAGE**********/
 body{
-  background-image: url(../warzone.png);
+  background-image: url(warzone.png);
   height: 100vh;
   background-size: cover;
   background-position: center;
